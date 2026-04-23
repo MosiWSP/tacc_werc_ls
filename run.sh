@@ -270,6 +270,17 @@ function handle_installation() {
 	fi
 }
 
+function install_git_packages() {
+    conda activate ${COOKBOOK_CONDA_ENV}
+    
+    echo "Installing MintPy..."
+    pip install git+https://github.com/insarlab/MintPy.git
+    
+    echo "Installing disp-xr..."
+    pip install git+https://github.com/opera-adt/disp-xr.git
+    
+    echo "Git packages installed."
+}
 
 
 #Execution
@@ -284,6 +295,7 @@ get_tap_certificate
 get_tap_token
 create_jupyter_configuration
 handle_installation
+install_git_packages
 run_jupyter
 port_fowarding
 send_url_to_webhook
