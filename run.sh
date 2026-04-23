@@ -8,7 +8,7 @@ set -xe
 # IS_GPU_JOB: Boolean value to indicate if the job is a GPU job. If true, it will load the CUDA module
 export GIT_REPO_URL="https://github.com/MosiWSP/tacc_werc_ls"
 export COOKBOOK_NAME="tacc_werc_ls"
-export COOKBOOK_CONDA_ENV="example"
+export COOKBOOK_CONDA_ENV="werc"
 IS_GPU_JOB=false
 
 
