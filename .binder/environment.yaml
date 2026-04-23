@@ -33,5 +33,3 @@ dependencies:
     - dem-stitcher
     - tile-mate
     - opera-utils
-    - git+https://github.com/insarlab/MintPy.git
-    - git+https://github.com/opera-adt/disp-xr.git
