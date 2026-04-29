@@ -64,6 +64,9 @@ function export_repo_variables() {
 	NODE_HOSTNAME_PREFIX=$(hostname -s) # Short Host Name  -->  name of compute node: c###-###
 	NODE_HOSTNAME_DOMAIN=$(hostname -d) # DNS Name  -->  stampede2.tacc.utexas.edu
 	NODE_HOSTNAME_LONG=$(hostname -f)   # Fully Qualified Domain Name  -->  c###-###.stampede2.tacc.utexas.edu
+	NOTEBOOK_WORKING_DIR=${WORK}/${COOKBOOK_NAME}
+	NOTEBOOK_SOURCE=${COOKBOOK_WORKSPACE_DIR}/notebook.ipynb
+	NOTEBOOK_TARGET=${NOTEBOOK_WORKING_DIR}/notebook.ipynb
 	export COOKBOOK_DIR
 	export COOKBOOK_WORKSPACE_DIR
 	export COOKBOOK_REPOSITORY_DIR
@@ -72,6 +75,9 @@ function export_repo_variables() {
 	export NODE_HOSTNAME_PREFIX
 	export NODE_HOSTNAME_DOMAIN
 	export NODE_HOSTNAME_LONG
+	export NOTEBOOK_WORKING_DIR
+	export NOTEBOOK_SOURCE
+	export NOTEBOOK_TARGET
 }
 
 function clone_cookbook_on_workspace() {
@@ -89,6 +95,20 @@ function clone_cookbook_on_workspace() {
 function init_directory() {
 	mkdir -p ${COOKBOOK_REPOSITORY_PARENT_DIR}
 	clone_cookbook_on_workspace
+}
+
+function seed_notebook() {
+	mkdir -p "${NOTEBOOK_WORKING_DIR}"
+	if [ ! -f "${NOTEBOOK_SOURCE}" ]; then
+		echo "TACC: WARNING - source notebook not found at ${NOTEBOOK_SOURCE}, skipping seed"
+		return 0
+	fi
+	if [ -f "${NOTEBOOK_TARGET}" ]; then
+		echo "TACC: notebook already present at ${NOTEBOOK_TARGET}, preserving user edits"
+	else
+		cp "${NOTEBOOK_SOURCE}" "${NOTEBOOK_TARGET}"
+		echo "TACC: seeded notebook to ${NOTEBOOK_TARGET}"
+	fi
 }
 
 function get_tap_certificate() {
@@ -279,6 +299,7 @@ if [ "$IS_GPU_JOB" = "true" ]; then
 fi
 export_repo_variables
 init_directory
+seed_notebook
 load_tap_functions
 get_tap_certificate
 get_tap_token
