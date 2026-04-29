@@ -1,5 +1,5 @@
 {
-  "id": "OPERA Workflow Notebook",
+  "id": "OPERA_Workflow_Notebook",
   "version": "0.0.8",
   "description": "Jupyter Lab environment for CPU",
   "owner": "${apiUserId}",
@@ -141,7 +141,7 @@
   },
   "tags": ["portalName: ALL"],
   "notes": {
-    "label": "OPERA Land Subsidence Notebook",
+    "label": "OPERA_Land_Subsidence_Notebook",
     "hideNodeCountAndCoresPerNode": true,
     "isInteractive": true,
     "icon": "jupyter",
