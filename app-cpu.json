@@ -1,5 +1,5 @@
 {
-  "id": "seed_test",
+  "id": "creating_file_test",
   "version": "0.0.7",
   "description": "Jupyter Lab environment for CPU",
   "owner": "${apiUserId}",
@@ -7,7 +7,7 @@
   "runtime": "SINGULARITY",
   "runtimeVersion": null,
   "runtimeOptions": ["SINGULARITY_RUN"],
-  "containerImage": "docker://ghcr.io/mosiwsp/tacc_werc_ls-cpu:sha-1fca63e",
+  "containerImage": "docker://ghcr.io/mosiwsp/tacc_werc_ls-gpu:sha-7e5914d",
   "jobType": "BATCH",
   "maxJobs": -1,
   "maxJobsPerUser": -1,
@@ -141,7 +141,7 @@
   },
   "tags": ["portalName: ALL"],
   "notes": {
-    "label": "label_seed_test",
+    "label": "creating_file_test1",
     "hideNodeCountAndCoresPerNode": true,
     "isInteractive": true,
     "icon": "jupyter",
