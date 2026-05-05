@@ -1,4 +1,7 @@
 git+https://github.com/opera-adt/disp-xr.git@ce0d1051f529acfc4a451918940e383206ba43d5
+# conda pulls aiobotocore (s3fs/asf_search); it caps botocore at <1.43.1 — pin before dem-stitcher upgrades boto3
+boto3==1.43.0
+botocore==1.43.0
 dem-stitcher==2.5.12
 tile-mate==0.0.15
 opera-utils==0.25.2
