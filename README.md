@@ -20,8 +20,8 @@ The environment and notebook are saved on the TACC storage. Therefore, you can r
 2. [`Dockerfile`](Dockerfile): a Docker image is built from the [`Dockerfile`](./Dockerfile). The Docker image defines the runtime environment for the application and the files that will be used by the application.
 3. [`run.sh`](run.sh): contains all the commands that will be executed on the TACC cluster.
 4. [`notebook.ipynb`](notebook.ipynb): a Jupyter Notebook that will be executed by the application. On the first job run, `run.sh` copies it from the cloned repository into `$WORK/<COOKBOOK_NAME>/notebook.ipynb` (your persistent working copy under the job's `work/` mount). Later runs leave that file unchanged so your edits are preserved.
-5. [`.binder/requirements.txt`](requirements.txt): a file that contains the Python packages that will be installed in the Docker image.
-6. [`.binder/environment.yml`](environment.yml): a file that contains the conda environment that will be installed in the Docker image.
+5. [`.binder/requirements.txt`](.binder/requirements.txt): pip-installed packages applied after the conda env is created (`run.sh` runs `pip install -r` after `conda env create`).
+6. [`.binder/environment.yaml`](.binder/environment.yaml): conda dependencies for that environment (`run.sh` also accepts `environment.yml` if you rename the file).
 
 ### Job run script
 

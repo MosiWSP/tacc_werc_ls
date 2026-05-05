@@ -1,35 +1,36 @@
 name: werc
 channels:
   - conda-forge
+  - defaults
 dependencies:
-  - python=3.12
-  - jupyterlab
-  - ipykernel
+  - python=3.13
+  - jupyterlab>=4.4,<5
+  - ipykernel>=6.30,<7
   - ipywidgets
   - ipympl
+  - cartopy
+  - pillow
+  - seaborn
+  - scikit-learn>=1.7,<2
   - asf_search
   - contextily
   - dask
   - folium
   - geopandas
-  - h5py
+  - h5py>=3.15,<4
   - h5netcdf
   - ipyleaflet
-  - matplotlib
+  - matplotlib>=3.10,<4
   - netcdf4
-  - numpy>=1.24,<2.0
-  - pandas
+  - numpy>=2.3,<3
+  - pandas>=2.3,<3
   - pyproj
   - rasterio
   - requests
   - rioxarray
   - s3fs
-  - scipy
+  - scipy>=1.16,<2
   - scikit-image
   - shapely
-  - xarray
-  - zarr
-  - pip:
-    - dem-stitcher
-    - tile-mate
-    - opera-utils
+  - xarray>=2025.10,<2026
+  - zarr>=3.1,<4
