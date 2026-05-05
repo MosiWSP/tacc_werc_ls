@@ -4,33 +4,33 @@ channels:
   - defaults
 dependencies:
   - python=3.13
-  - jupyterlab>=4.4,<5
-  - ipykernel>=6.30,<7
+  - numpy>=2
+  - jupyterlab
+  - ipykernel
   - ipywidgets
   - ipympl
   - cartopy
   - pillow
   - seaborn
-  - scikit-learn>=1.7,<2
+  - scikit-learn
   - asf_search
   - contextily
   - dask
   - folium
   - geopandas
-  - h5py>=3.15,<4
+  - h5py
   - h5netcdf
   - ipyleaflet
-  - matplotlib>=3.10,<4
+  - matplotlib
   - netcdf4
-  - numpy>=2.3,<3
-  - pandas>=2.3,<3
+  - pandas
   - pyproj
   - rasterio
   - requests
   - rioxarray
   - s3fs
-  - scipy>=1.16,<2
+  - scipy
   - scikit-image
   - shapely
-  - xarray>=2025.10,<2026
-  - zarr>=3.1,<4
+  - xarray
+  - zarr
