@@ -65,8 +65,8 @@ function export_repo_variables() {
 	NODE_HOSTNAME_DOMAIN=$(hostname -d) # DNS Name  -->  stampede2.tacc.utexas.edu
 	NODE_HOSTNAME_LONG=$(hostname -f)   # Fully Qualified Domain Name  -->  c###-###.stampede2.tacc.utexas.edu
 	NOTEBOOK_WORKING_DIR=${WORK}/${COOKBOOK_NAME}
-	NOTEBOOK_SOURCE=${COOKBOOK_WORKSPACE_DIR}/notebook.ipynb
-	NOTEBOOK_TARGET=${NOTEBOOK_WORKING_DIR}/notebook.ipynb
+	NOTEBOOK_SOURCE=${COOKBOOK_WORKSPACE_DIR}/OPERA DISP-S1.ipynb
+	NOTEBOOK_TARGET=${NOTEBOOK_WORKING_DIR}/OPERA DISP-S1.ipynb
 	export COOKBOOK_DIR
 	export COOKBOOK_WORKSPACE_DIR
 	export COOKBOOK_REPOSITORY_DIR

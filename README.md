@@ -19,7 +19,7 @@ The environment and notebook are saved on the TACC storage. Therefore, you can r
 1. [`app.json`](app.json) file: contains the definition of the Tapis application, including the application's name, description, Docker image, input files, and advanced options.
 2. [`Dockerfile`](Dockerfile): a Docker image is built from the [`Dockerfile`](./Dockerfile). The Docker image defines the runtime environment for the application and the files that will be used by the application.
 3. [`run.sh`](run.sh): contains all the commands that will be executed on the TACC cluster.
-4. [`notebook.ipynb`](notebook.ipynb): a Jupyter Notebook that will be executed by the application. On the first job run, `run.sh` copies it from the cloned repository into `$WORK/<COOKBOOK_NAME>/notebook.ipynb` (your persistent working copy under the job's `work/` mount). Later runs leave that file unchanged so your edits are preserved.
+4. [`OPERA DISP-S1.ipynb`](OPERA%20DISP-S1.ipynb): a Jupyter Notebook that will be executed by the application. On the first job run, `run.sh` copies it from the cloned repository into `$WORK/<COOKBOOK_NAME>/OPERA DISP-S1.ipynb` (your persistent working copy under the job's `work/` mount). Later runs leave that file unchanged so your edits are preserved.
 5. [`.binder/requirements.txt`](.binder/requirements.txt): pip-installed packages applied after the conda env is created (`run.sh` runs `pip install -r` after `conda env create`).
 6. [`.binder/environment.yaml`](.binder/environment.yaml): conda dependencies for that environment (`run.sh` also accepts `environment.yml` if you rename the file).
 
@@ -104,7 +104,7 @@ Each app has a unique `id` and `description`. So, you should change these fields
 
    ![Select the parameters](images/open-session.png)
 
-4. In Jupyter Lab, open the notebook from **`work/<COOKBOOK_NAME>/notebook.ipynb`** (for example `work/tacc_werc_ls/notebook.ipynb`). That path is your working copy on `$WORK`; it is created automatically on the first run and is not overwritten on later runs, so you do not need to copy the notebook manually. The repository clone under `work/cookbooks/<COOKBOOK_NAME>/` stays in sync with git when you choose to update the cookbook.
+4. In Jupyter Lab, open the notebook from **`work/<COOKBOOK_NAME>/OPERA DISP-S1.ipynb`** (for example `work/tacc_werc_ls/OPERA DISP-S1.ipynb`). That path is your working copy on `$WORK`; it is created automatically on the first run and is not overwritten on later runs, so you do not need to copy the notebook manually. The repository clone under `work/cookbooks/<COOKBOOK_NAME>/` stays in sync with git when you choose to update the cookbook.
 
 ## Next templates
 
